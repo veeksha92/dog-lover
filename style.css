@@ -1,0 +1,255 @@
+:root {
+--color-primary: hsl(47.2, 82.5%, 55.3%); /* bright gold for CTAs: ebc32f */
+--color-background: hsl(234.8, 21.1%, 21.4%); /* dark background: 2b2d42 */
+--color-text: hsl(197.1, 24.1%, 94.3%); /* light text (or white): edf2f4 */
+--color-accent: hsl(234.9, 30.4%, 45.1%); /* indigo accent: 505696 */
+--color-border: hsl(46.9, 17.6%, 35.7%); /* neutral border: 6b644b */
+--color-highlight: hsl(47.2, 37.9%, 48.6%); /* olive-gold accent: ab974d */
+}
+
+/*defining the style for index and other pages*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEEEEE;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+h1 {
+ font-size: 80px;
+ letter-spacing: 25px;
+ word-spacing: 0.3em;
+ text-shadow: 13px 13px 4px #666; 
+}
+
+h2 {
+ font-size: 40px;
+ margin-top: 1px;
+}
+
+header p {
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+nav {
+    text-align: center;
+    background-color: var(--color-text);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.5em;
+    height: 540px;
+}
+
+.special {
+    font-style: oblique;
+}
+
+.job-title {
+    text-transform: uppercase;
+}
+
+#work {
+    background-color: var(--color-text);
+    color: var(--color-accent);
+}
+
+h1, h2 {
+    font-family: 'Tangerine', cursive, sans-serif;
+    font-weight: 400;
+}
+
+header h2 {
+color: var(--color-text);
+font-style: italic;
+} 
+
+header nav ul {
+    list-style-type: none;
+}
+
+footer h2 {
+    font-family: 'Tangerine', cursive, sans-serif;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 10px;
+    border-radius: 15px 30px 100px 5px;
+    box-shadow: 5px 5px 5px #828282;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+header, footer {
+    background-color: var(--color-background);
+    color: var(--color-text)
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+header > a {
+    font-style: oblique;
+}
+
+h3 ~ p {
+    text-decoration: underline;
+    text-indent: 25px;
+}
+
+h3 + p {
+    font-variant:small-caps;
+}
+
+header img[src] {
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    position: relative;
+    top: 60px;
+    left: 20px;
+    z-index: 1;
+}
+
+img {
+    border-style: none;
+}
+
+.education { 
+    background: linear-gradient(rgba(141, 153, 190,
+0.8), rgba(141, 153, 190, 0.1)), url(../images/toronto.jpg) no-repeat fixed; 
+    background-size: cover;
+
+}
+
+/* using ttf font */
+
+@font-face {
+ font-family: myFont;
+ src: url(../fonts/Kingthings_Spikeless.ttf);
+}
+header h2 {
+font-family: myFont;
+letter-spacing:25px;
+}
+
+/* end of ttf */
+
+section ul { 
+    list-style-image: url(../images/marker.gif);
+}
+/*scrollbar settings */
+/* width */
+::-webkit-scrollbar {
+ width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 5px grey;
+ border-radius: 8px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #2b2d42;
+ border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background: rgb(47, 200, 245);
+}
+/* end of scrollbar settings */
+
+.content-wrap {
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 60px 50px;
+    overflow: hidden;
+}
+
+#about { 
+    border-bottom: 22px solid rgb(255, 133, 202); 
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+}
+
+nav li {
+    padding: 2px;
+    display: inline-block;
+    margin-top: 10px;
+    height: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.trans {
+    background-color: #FFFFFF;
+    opacity: 0.5; 
+    font-size: 3em; 
+    text-align: center;
+}
+
+nav a:link {
+    color:red;
+}
+nav a:visited {color:blue;}
+nav a:focus {color:green;}
+nav a:hover {background-color:#2b2d42;color:white;transition:0.9s;}
+nav a:active {color:yellow;}
+
+.btn:hover{
+ color: #000066;
+ background-color:
+white;
+}
+
+@media (max-width: 899px){
+ header {
+ text-align: center;
+ }
+ .profile-img {
+ margin-top:90px;
+ width: 350px;
+ }
+}
+
+@media (min-width: 900px) {
+.col-narrow {
+ width: 30%;
+ float: left;
+ }
+.col-wide {
+ width: 70%;
+ float: left;
+ padding-left: 20px;
+ }
+}
